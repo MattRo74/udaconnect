@@ -1,0 +1,20 @@
+I. Download Kafka on local machine
+
+https://kafka.apache.org/downloads
+
+II. Starting/Testing on local machine (windows)
+
+step 1: .\bin\windows\zookeeper-server-start .\config\zookeeper.properties
+step 2: .\bin\windows\kafka-server-start.bat .\config\server.properties
+step 3: .\bin\windows\kafka-topics.bat --create --topic locations --bootstrap-server localhost:9092 (Create Topic "locations")
+step 4: .\bin\windows\kafka-console-consumer.bat --topic locations --from-beginning --bootstrap-server localhost:9092 (Listener)
+step 5: .\bin\windows\kafka-console-producer.bat --topic locations --bootstrap-server localhost:9092
+
+III. 
+
+
+Requirements: 
+
+
+
+
