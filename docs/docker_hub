@@ -1,0 +1,28 @@
+udaconnect-app (Port 3000)
+docker tag udaconnect-app mattrohe/udaconnect-app
+docker push mattrohe/udaconnect-app
+
+udaconnect-api (Port 5000)
+docker tag udaconnect-api mattrohe/udaconnect-api
+docker push mattrohe/udaconnect-api
+
+udaconnect-api_location (Port 5000)
+docker tag udaconnect-api_location mattrohe/udaconnect-api_location
+docker push mattrohe/udaconnect-api_location
+
+udaconnect-api_connection (Port 5000)
+docker tag udaconnect-api_connection mattrohe/udaconnect-api_connection
+docker push mattrohe/udaconnect-api_connection
+
+udaconnect-api_person (Port 5000)
+docker tag udaconnect-api_person mattrohe/udaconnect-api_person
+docker push mattrohe/udaconnect-api_person
+
+udaconnect-kafka_consumer (Port 5000)
+docker tag udaconnect-kafka_consumer mattrohe/udaconnect-kafka_consumer
+docker push mattrohe/udaconnect-kafka_consumer
+
+udaconnect-grpc_writer (Port 5005)
+docker tag udaconnect-grpc_writer mattrohe/udaconnect-grpc_writer
+docker push mattrohe/udaconnect-grpc_writer
+

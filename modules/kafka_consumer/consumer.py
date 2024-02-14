@@ -11,7 +11,7 @@ Sample implementation of a writer that can be used to write messages to gRPC.
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("kafka-consumer")
 
-TOPIC_NAME = 'person_api'
+TOPIC_NAME = 'persons'
 KAFKA_SERVER = 'kafka:9092'
 
 consumer = KafkaConsumer(TOPIC_NAME, bootstrap_servers=[KAFKA_SERVER], value_deserializer=lambda m: json.dumps(m.decode('utf-8')))
@@ -31,11 +31,11 @@ for queue in consumer:
             longitude = json_message["longitude"],
             latitude = json_message["latitude"]
         )
-        stub.Create(location)
+        stub.create_location(location)
     else:
         person = udaconnect_pb2.PersonMessage(
             first_name = json_message["first_name"],
             last_name = json_message["last_name"],
             company_name = json_message["company_name"]
         )
-        stub.Create(person)
+        stub.create_person(person)

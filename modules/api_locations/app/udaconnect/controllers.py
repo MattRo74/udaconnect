@@ -10,7 +10,7 @@ from typing import Optional, List
 
 DATE_FORMAT = "%Y-%m-%d"
 
-api = Namespace("UdaConnect", description="Connections via geolocation.")  # noqa
+api = Namespace("api_locations", description="Connections via geolocation.")  # noqa
 
 
 # TODO: This needs better exception handling

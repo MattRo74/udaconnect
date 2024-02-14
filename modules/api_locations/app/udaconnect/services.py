@@ -12,7 +12,7 @@ from kafka import KafkaProducer
 logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger("udaconnect-api_locations")
 
-TOPIC_NAME = 'udaconnect_location'
+TOPIC_NAME = 'locations'
 KAFKA_SERVER = 'kafka:9092'
 
 class LocationService:
@@ -51,7 +51,6 @@ class LocationService:
             logger.warning(f"Unexpected data format in payload: {validation_results}")
             raise Exception(f"Invalid payload: {validation_results}")
         
-        # 
         location_producer = KafkaProducer(bootstrap_servers=KAFKA_SERVER)
         location_producer.send(TOPIC_NAME, bytes(str(location), 'utf-8'))
         location_producer.flush()
