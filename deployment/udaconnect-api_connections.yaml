@@ -2,37 +2,37 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    service: udaconnect-api_locations
-  name: udaconnect-api_locations
+    service: udaconnect-api_connections
+  name: udaconnect-api_connections
 spec:
   ports:
   - name: "5000"
     port: 5000
     targetPort: 5000
-    nodePort: 30003
+    nodePort: 30004
   selector:
-    service: udaconnect-api_locations
+    service: udaconnect-api_connections
   type: NodePort
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    service: udaconnect-api_locations
-  name: udaconnect-api_locations
+    service: udaconnect-api_connections
+  name: udaconnect-api_connections
 spec:
   replicas: 1
   selector:
     matchLabels:
-      service: udaconnect-api_locations
+      service: udaconnect-api_connections
   template:
     metadata:
       labels:
-        service: udaconnect-api_locations
+        service: udaconnect-api_connections
     spec:
       containers:
-      - image: mattrohe/udaconnect-api_locations:latest
-        name: udaconnect-api_locations
+      - image: mattrohe/udaconnect-api_connections:latest
+        name: udaconnect-api_connections
         imagePullPolicy: Always
         env:
         - name: DB_USERNAME

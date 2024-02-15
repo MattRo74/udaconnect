@@ -1,28 +1,35 @@
 udaconnect-app (Port 3000)
+docker build -t udaconnect-app .
 docker tag udaconnect-app mattrohe/udaconnect-app
 docker push mattrohe/udaconnect-app
 
 udaconnect-api (Port 5000)
+docker build -t udaconnect-api .
 docker tag udaconnect-api mattrohe/udaconnect-api
 docker push mattrohe/udaconnect-api
 
-udaconnect-api_location (Port 5000)
-docker tag udaconnect-api_location mattrohe/udaconnect-api_location
-docker push mattrohe/udaconnect-api_location
+udaconnect-api_locations (Port 5000)
+docker build -t udaconnect-api_locations .
+docker tag udaconnect-api_locations mattrohe/udaconnect-api_locations
+docker push mattrohe/udaconnect-api_locations
 
-udaconnect-api_connection (Port 5000)
-docker tag udaconnect-api_connection mattrohe/udaconnect-api_connection
-docker push mattrohe/udaconnect-api_connection
+udaconnect-api_connections (Port 5000)
+docker build -t udaconnect-api_connections .
+docker tag udaconnect-api_connections mattrohe/udaconnect-api_connections
+docker push mattrohe/udaconnect-api_connections
 
-udaconnect-api_person (Port 5000)
-docker tag udaconnect-api_person mattrohe/udaconnect-api_person
-docker push mattrohe/udaconnect-api_person
+udaconnect-api_persons (Port 5000)
+docker build -t udaconnect-api_persons .
+docker tag udaconnect-api_persons mattrohe/udaconnect-api_persons
+docker push mattrohe/udaconnect-api_persons
 
 udaconnect-kafka_consumer (Port 5000)
+docker build -t udaconnect-kafka_consumer .
 docker tag udaconnect-kafka_consumer mattrohe/udaconnect-kafka_consumer
 docker push mattrohe/udaconnect-kafka_consumer
 
 udaconnect-grpc_writer (Port 5005)
+docker build -t udaconnect-grpc_writer .
 docker tag udaconnect-grpc_writer mattrohe/udaconnect-grpc_writer
 docker push mattrohe/udaconnect-grpc_writer
 
