@@ -10,7 +10,7 @@ from sqlalchemy.sql import text
 from kafka import KafkaProducer
 
 logging.basicConfig(level=logging.WARNING)
-logger = logging.getLogger("udaconnect-api_persons")
+logger = logging.getLogger("udaconnect-api-persons")
 
 TOPIC_NAME = 'persons'
 KAFKA_SERVER = 'kafka:9092'

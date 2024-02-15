@@ -11,7 +11,7 @@ from typing import Optional, List
 
 DATE_FORMAT = "%Y-%m-%d"
 
-api = Namespace("api_connections", description="Connections via geolocation.")  # noqa
+api = Namespace("api-connections", description="Connections via geolocation.")  # noqa
 
 
 @api.route("/persons/<person_id>/connection")

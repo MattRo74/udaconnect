@@ -18,7 +18,7 @@ consumer = KafkaConsumer(TOPIC_NAME, bootstrap_servers=[KAFKA_SERVER], value_des
 
 #print("Sending sample payload...")
 
-channel = grpc.insecure_channel("udaconnect-grpc_writer:5005")
+channel = grpc.insecure_channel("udaconnect-grpc-writer:5005")
 stub = udaconnect_pb2_grpc.UdaconnectServiceStub(channel)
 
 for queue in consumer:

@@ -8,28 +8,28 @@ docker build -t udaconnect-api .
 docker tag udaconnect-api mattrohe/udaconnect-api
 docker push mattrohe/udaconnect-api
 
-udaconnect-api_locations (Port 5000)
-docker build -t udaconnect-api_locations .
-docker tag udaconnect-api_locations mattrohe/udaconnect-api_locations
-docker push mattrohe/udaconnect-api_locations
+udaconnect-api-locations (Port 5000)
+docker build -t udaconnect-api-locations .
+docker tag udaconnect-api-locations mattrohe/udaconnect-api-locations
+docker push mattrohe/udaconnect-api-locations
 
-udaconnect-api_connections (Port 5000)
-docker build -t udaconnect-api_connections .
-docker tag udaconnect-api_connections mattrohe/udaconnect-api_connections
-docker push mattrohe/udaconnect-api_connections
+udaconnect-api-connections (Port 5000)
+docker build -t udaconnect-api-connections .
+docker tag udaconnect-api-connections mattrohe/udaconnect-api-connections
+docker push mattrohe/udaconnect-api-connections
 
-udaconnect-api_persons (Port 5000)
-docker build -t udaconnect-api_persons .
-docker tag udaconnect-api_persons mattrohe/udaconnect-api_persons
-docker push mattrohe/udaconnect-api_persons
+udaconnect-api-persons (Port 5000)
+docker build -t udaconnect-api-persons .
+docker tag udaconnect-api-persons mattrohe/udaconnect-api-persons
+docker push mattrohe/udaconnect-api-persons
 
-udaconnect-kafka_consumer (Port 5000)
-docker build -t udaconnect-kafka_consumer .
-docker tag udaconnect-kafka_consumer mattrohe/udaconnect-kafka_consumer
-docker push mattrohe/udaconnect-kafka_consumer
+udaconnect-kafka-consumer (Port 5000)
+docker build -t udaconnect-kafka-consumer .
+docker tag udaconnect-kafka-consumer mattrohe/udaconnect-kafka-consumer
+docker push mattrohe/udaconnect-kafka-consumer
 
-udaconnect-grpc_writer (Port 5005)
-docker build -t udaconnect-grpc_writer .
-docker tag udaconnect-grpc_writer mattrohe/udaconnect-grpc_writer
-docker push mattrohe/udaconnect-grpc_writer
+udaconnect-grpc-writer (Port 5005)
+docker build -t udaconnect-grpc-writer .
+docker tag udaconnect-grpc-writer mattrohe/udaconnect-grpc-writer
+docker push mattrohe/udaconnect-grpc-writer
 

@@ -10,7 +10,7 @@ from typing import Optional, List
 
 DATE_FORMAT = "%Y-%m-%d"
 
-api = Namespace("api_persons", description="Connections via geolocation.")  # noqa
+api = Namespace("api-persons", description="Connections via geolocation.")  # noqa
 
 
 # TODO: This needs better exception handling
