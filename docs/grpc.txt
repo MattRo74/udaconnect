@@ -1,0 +1,12 @@
+
+1. Clone https://github.com/MattRo74/udaconnect
+2. Install and run python.
+3. "pip install -r requirements.txt" in udaconnect/modules/grpc-writer/
+4. Starting Server in udaconnect/modules/grpc-writer/: python grpc_server.py
+5. Starting Writer in udaconnect/modules/grpc-writer/: python grpc_writer.py
+
+Output should be: 
+
+Server starting on port 5005...
+Received a message!
+{'person_id': 9, 'latitude': '51.451355', 'longitude': '7.014793', 'creation_time': '2024-02-16T14:56:23'}

@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("kafka-consumer")
 
 TOPIC_NAME = 'persons'
-KAFKA_SERVER = 'kafka:9092'
+KAFKA_SERVER = 'localhost:9092'
 
 consumer = KafkaConsumer(TOPIC_NAME, bootstrap_servers=[KAFKA_SERVER], value_deserializer=lambda m: json.dumps(m.decode('utf-8')))
 
