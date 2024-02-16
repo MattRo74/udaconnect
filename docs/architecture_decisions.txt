@@ -1,0 +1,27 @@
+Message Passing Techniques in this project
+
+Task is to refactor the monolith project into a microservice architecture.
+
+This are my strategies in this project:
+
+Strategy 1: Implementing a Microservice Architecture
+After analysing the project I decided to create the API into three services:
+    - Locations
+    - Persons
+    - Connections
+
+All of them will be deployed with an own docker container in Kubernetes. This has the advantage that the services in the lifecycle can be maintained independently of each other and are more scalable.
+
+Strategy 2: Implementing gRPC
+In this project we have well standardized data. Therefore, gRPC is ideal here. It provides a great performance.
+
+
+Strategy 3: Implementing Kafka
+A large volume of location data is expected. For that reason, I will implemend Kafka. Kafka can handle large streams of incoming streams without data losses (beause of data overload).
+Another reason using Kafka is that databases (in this case postgres) are not designed of for a function as a message broker. 
+
+
+
+
+
+
