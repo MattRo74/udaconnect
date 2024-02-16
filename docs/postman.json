@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "95a61a42-64e0-47a9-9f2a-0ae37f9f5922",
+		"name": "udaconnect",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32302048"
+	},
+	"item": [
+		{
+			"name": "get /persons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:30002/api/persons",
+					"host": [
+						"localhost"
+					],
+					"port": "30002",
+					"path": [
+						"api",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post /person",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 7,\r\n    \"first_name\": \"Matthias\",\r\n    \"last_name\": \"Rohe\",\r\n    \"company_name\": \"Vodafone\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:30002/api/persons",
+					"host": [
+						"localhost"
+					],
+					"port": "30002",
+					"path": [
+						"api",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get /person",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:30002/api/persons/1",
+					"host": [
+						"localhost"
+					],
+					"port": "30002",
+					"path": [
+						"api",
+						"persons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post /locations",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"creation_time\": \"2024-02-16T14:56:23\",\r\n    \"person_id\": \"1\",\r\n    \"longitude\": \"7.014793\",\r\n    \"latitude\": \"51.451355\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:30003/api/locations",
+					"host": [
+						"localhost"
+					],
+					"port": "30003",
+					"path": [
+						"api",
+						"locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get /locations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:30003/api/locations/30",
+					"host": [
+						"localhost"
+					],
+					"port": "30003",
+					"path": [
+						"api",
+						"locations",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get /connections",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:30004/api/persons/1/connection?start_date=2020-01-01&end_date=2020-12-30&distance=5",
+					"host": [
+						"localhost"
+					],
+					"port": "30004",
+					"path": [
+						"api",
+						"persons",
+						"1",
+						"connection"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2020-01-01"
+						},
+						{
+							"key": "end_date",
+							"value": "2020-12-30"
+						},
+						{
+							"key": "distance",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
